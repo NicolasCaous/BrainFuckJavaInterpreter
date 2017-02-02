@@ -4,31 +4,31 @@ public class looping {
 	public No topo;
 	
 	public looping() {
-		topo = null;
+		this.topo = null;
 	}
 	
 	public void push(int valor) {
-		if(topo == null) {
-			topo = new No();
-			topo.valor = valor;
+		if(this.topo == null) {
+			this.topo = new No();
+			this.topo.valor = valor;
 		} else {
-			topo.prox = new No();
-			topo.prox.ant = topo;
-			topo = topo.prox;
-			topo.valor = valor;
+			this.topo.prox = new No();
+			this.topo.prox.ant = this.topo;
+			this.topo = this.topo.prox;
+			this.topo.valor = valor;
 		}
 	}
 	
 	public int pop() {
-		if(topo == null) {
+		if(this.topo == null) {
 			return (Integer) null;
-		} else if(topo.ant == null) {
-			int tmp = topo.valor;
-			topo = null;
+		} else if(this.topo.ant == null) {
+			int tmp = this.topo.valor;
+			this.topo = null;
 			return tmp;
 		} else {
-			int tmp = topo.valor;
-			topo = topo.ant;
+			int tmp = this.topo.valor;
+			this.topo = this.topo.ant;
 			return tmp;
 		}
 	}
