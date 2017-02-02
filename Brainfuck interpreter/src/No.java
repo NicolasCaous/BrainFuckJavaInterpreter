@@ -6,9 +6,9 @@ public class No {
 	public No ant;
 	
 	public No() {
-		valor = 0;
-		prox = null;
-		ant = null;
+		this.valor = 0;
+		this.prox = null;
+		this.ant = null;
 	}
 
 }
